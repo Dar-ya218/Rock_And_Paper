@@ -14,7 +14,10 @@ def get_winner(player, computer):
         'paper': 'rock'
     }
     
-    return "player" if winning_combinations[player] == computer else "computer"
+    if winning_combinations[player] == computer:
+        return "player"
+    else:
+        return "computer"
 
 def display_ascii_art(choice):
     art = {
